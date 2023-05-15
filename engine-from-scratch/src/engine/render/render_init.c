@@ -62,7 +62,7 @@ void render_init_color_texture(u32 *texture)
     glBindTexture(GL_TEXTURE_2D, *texture);
 
     u8 solid_white[4] = {255, 255, 255, 255};
-    glTextImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 1, 0, GL_RGBA, GL_UNSIGNED_BYTE, solid_white);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 1, 0, GL_RGBA, GL_UNSIGNED_BYTE, solid_white);
 
     glBindTexture(GL_TEXTURE_2D, 0);
 }

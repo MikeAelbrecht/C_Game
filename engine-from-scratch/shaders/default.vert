@@ -10,5 +10,5 @@ uniform mat4 model;
 void main()
 {
     uvs = a_uvs;
-    gl_Posistion = projection * model * vec4(a_pos, 1.0);
+    gl_Position = projection * model * vec4(a_pos, 1.0);
 }
