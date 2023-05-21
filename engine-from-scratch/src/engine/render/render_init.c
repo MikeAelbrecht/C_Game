@@ -90,7 +90,7 @@ void render_init_quad(u32 *vao, u32 *vbo, u32 *ebo)
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, *ebo);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
     // xyz
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(f32), NULL);
@@ -99,4 +99,6 @@ void render_init_quad(u32 *vao, u32 *vbo, u32 *ebo)
     // uv
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(f32), (void *)(3 * sizeof(f32)));
     glEnableVertexAttribArray(1);
+
+    glBindVertexArray(0);
 }

@@ -39,7 +39,7 @@ void render_quad(vec2 pos, vec2 size, vec4 color)
     mat4x4_scale_aniso(model, model, size[0], size[1], 1);
 
     glUniformMatrix4fv(glGetUniformLocation(state.shader_default, "model"), 1, GL_FALSE, &model[0][0]);
-    glUniform4fv(glGetUniformLocation(state.shader_default, "color"), 1, color);
+    glUniform4fv(glad_glGetUniformLocation(state.shader_default, "color"), 1, color);
 
     glBindVertexArray(state.vao_quad);
 
